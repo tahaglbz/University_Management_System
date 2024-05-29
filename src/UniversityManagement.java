@@ -82,6 +82,9 @@ public class UniversityManagement {
             dbOps.insertSql(tableName, name, surname, dbOps.findCourseCode(course));
             dbOps.showTableData(tableModel, tableName);
             JOptionPane.showMessageDialog(UniPanel, "Data inserted successfully");
+            surnameTextField.setText("");
+            nameTextField.setText("");
+            courseTextField.setText("");
         }else {
             JOptionPane.showMessageDialog(UniPanel,"Invalid Course Name");
         }
@@ -105,6 +108,9 @@ public class UniversityManagement {
             dbOps.updateSql(tableName, name, surname, dbOps.findCourseCode(course), id, idValue);
             dbOps.showTableData(tableModel, tableName);
             JOptionPane.showMessageDialog(UniPanel, "Data updated successfully");
+            surnameTextField.setText("");
+            nameTextField.setText("");
+            courseTextField.setText("");
         } else {
             JOptionPane.showMessageDialog(UniPanel, "Please select a row to update");
         }
