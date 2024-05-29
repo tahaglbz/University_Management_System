@@ -70,9 +70,9 @@ public class UniversityManagement {
     }
     private void insertBtn() {
         String tableName = studentRadioButton.isSelected() ? "student" : "academician";
-        String name = nameTextField.getText();
-        String surname = surnameTextField.getText();
-        String course = courseTextField.getText();
+        String name = nameTextField.getText().trim();
+        String surname = surnameTextField.getText().trim();
+        String course = courseTextField.getText().trim();
         boolean res = dbOps.controlCourseTable(course);
         if (name.isEmpty() || surname.isEmpty() || course.isEmpty()) {
             JOptionPane.showMessageDialog(UniPanel, "Please fill in all fields");
@@ -91,9 +91,9 @@ public class UniversityManagement {
         int selectedRow = table1.getSelectedRow();
         if (selectedRow >= 0) {
             String tableName = studentRadioButton.isSelected() ? "student" : "academician";
-            String name = nameTextField.getText();
-            String surname = surnameTextField.getText();
-            String course = courseTextField.getText();
+            String name = nameTextField.getText().trim();
+            String surname = surnameTextField.getText().trim();
+            String course = courseTextField.getText().trim();
             String id = studentRadioButton.isSelected() ? "StudentID" : "AcademicianID";
             String idValue = tableModel.getValueAt(selectedRow, 0).toString();
 
