@@ -5,7 +5,7 @@ import javax.swing.table.DefaultTableModel;
 public class SQLOperations {
     private static final String dbUrl = "jdbc:mysql://localhost:3306/university";
     private static final String user = "root";
-    private static final String password = "tahaloveilayda123";
+    private static final String password = "";
 
     private static Connection getConnection() {
         try {
